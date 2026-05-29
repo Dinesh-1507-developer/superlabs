@@ -69,7 +69,7 @@ prisma/
 1. [render.com](https://render.com) → sign in with GitHub  
 2. **New +** → **PostgreSQL** (Free) → copy **Internal Database URL**  
 3. **New +** → **Web Service** → repo `superlabs`  
-   - **Build:** `npm install && npx prisma migrate deploy`  
+   - **Build:** `npm install && npm run render:build`  
    - **Start:** `npm start`  
    - **Env:** `DATABASE_URL` = Postgres URL, `NODE_ENV` = `production`  
 4. After deploy → **Shell:** `npm run db:seed`  
