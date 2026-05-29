@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperLabs - Add Product</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a href="/admin.html" class="navbar-brand">SuperLabs Admin</a>
+      <a href="/admin.html" class="btn btn-outline-light btn-sm ms-auto">Back to list</a>
+    </div>
+  </nav>
+
+  <div class="container form-box mb-5">
+    <h4>Add Product</h4>
+    <div id="alertBox" class="alert" style="display:none;"></div>
+
+    <form id="createForm" class="mt-3">
+      <div class="mb-2"><label>Name</label><input name="name" class="form-control" required></div>
+      <div class="mb-2"><label>Brand</label><input name="brand" class="form-control" required></div>
+      <div class="mb-2"><label>Description</label><textarea name="description" class="form-control" required></textarea></div>
+      <div class="mb-2"><label>Price ($)</label><input name="price" type="number" step="0.01" class="form-control" required></div>
+      <div class="mb-2"><label>Original price ($, optional)</label><input name="originalPrice" type="number" step="0.01" class="form-control"></div>
+      <div class="mb-2"><label>SKU</label><input name="sku" class="form-control" required></div>
+      <div class="mb-2">
+        <label>Image URL</label>
+        <input name="image" class="form-control" placeholder="Direct .jpg/.png link or Kommodo share URL">
+        <small class="text-muted">Kommodo page links (kommodo.ai/i/...) are converted to direct image automatically.</small>
+      </div>
+      <div class="mb-2"><label>Rating (0-5)</label><input name="rating" type="number" step="0.1" class="form-control" value="4"></div>
+      <div class="mb-2"><label>Review count</label><input name="reviews" type="number" class="form-control" value="0"></div>
+      <div class="mb-2 form-check">
+        <input name="availability" type="checkbox" class="form-check-input" id="availability" checked>
+        <label for="availability">In stock</label>
+      </div>
+      <button class="btn btn-primary">Save</button>
+    </form>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
